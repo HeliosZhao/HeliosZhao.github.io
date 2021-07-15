@@ -1,3 +1,3 @@
-## Yuyang Zhao's Homepage
+## Yuyang Zhao
 
 yuyangzhao.com
