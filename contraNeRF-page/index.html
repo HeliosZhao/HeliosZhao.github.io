@@ -1,0 +1,295 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0045)http://6.869.csail.mit.edu/fa19/schedule.html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link href="https://fonts.cdnfonts.com/css/caveat" rel="stylesheet">
+<style>
+    @import url('https://fonts.cdnfonts.com/css/caveat');
+</style>
+<!-- <script src="./assets/teaser-data.js"></script> -->
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ContraNeRF</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta name="description"
+        content="Project page for &#39;ContraNeRF: Generalizable Neural Radiance Fields for Synthetic-to-real Novel View Synthesis via Contrastive Learning.&#39;">
+    <!-- <link rel="icon" href="./assets/showlab.ico"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <p class="title">ContraNeRF: <br> Generalizable Neural Radiance Fields for Synthetic-to-real Novel View Synthesis via Contrastive Learning</p>
+        <!-- Make-A-Protagonist: <br> Generic Video Editing with An Ensemble of Experts</p> -->
+    <p class="author">
+        <span class="author">
+            Hao Yang<sup>1</sup>
+        </span>
+        <span class="author">
+            <a>Lanqing Hong</a><sup>2</sup>
+        </span>
+        <span class="author">
+            <a>Aoxue Li</a><sup>2</sup>
+        </span>
+        <span class="author">
+            <a>Tianyang Hu</a><sup>2</sup>
+        </span>
+        <br>
+        <span class="author">
+            <a>Zhenguo Li</a><sup>2</sup>
+        </span>
+        <span class="author">
+            <a>Gim Hee Lee</a><sup>3</sup>
+        </span>
+        <span class="author">
+            <a>Liwei Wang</a><sup>1</sup>
+        </span>
+    </p>
+
+    <p class="affiliations">
+        <span class="author"><sup>1 </sup>Peking University</span>
+        <span class="author"><sup>2 </sup>Huawei Noah's Ark Lab</span>
+        <span class="author"><sup>3 </sup>National University of Singapore</span>
+    </p>
+
+    <p class="menu">
+        <a style="color: steelblue" href="https://arxiv.org/abs/2303.11052">[Paper]</a> 
+        <a style="color: steelblue" href="https://github.com/ContraNeRF/ContraNeRF" >[Code]</a>
+    </p>
+
+    <div class="container">
+
+        <p style="text-align: center;"><span class="section"><b>Abstract</b></span></p>
+        <p style="text-align: justify; display: flex; justify-content: center; max-width: 800px; margin:auto"> 
+            Although many recent works have investigated generalizable NeRF-based novel view synthesis for unseen scenes, they seldom consider the synthetic-to-real generalization, which is desired in many practical applications. In this work, we first investigate the effects of synthetic data in synthetic-to-real novel view synthesis and surprisingly observe that models trained with synthetic data tend to produce sharper but less accurate volume densities. For pixels where the volume densities are correct, fine-grained details will be obtained. Otherwise, severe artifacts will be produced. To maintain the advantages of using synthetic data while avoiding its negative effects, we propose to introduce geometry-aware contrastive learning to learn multi-view consistent features with geometric constraints. Meanwhile, we adopt cross-view attention to further enhance the geometry perception of features by querying features across input views. Experiments demonstrate that under the synthetic-to-real setting, our method can render images with higher quality and better fine-grained details, outperforming existing generalizable novel view synthesis methods in terms of PSNR, SSIM, and LPIPS. When trained on real data, our method also achieves state-of-the-art results.
+        <p class="section">&nbsp;</p>
+
+        <p class="section"><b>Framework</b></p>
+        <div style="text-align: center">
+            <img src="./assets/pipeline-v5.png" alt="" width="800px" style="max-width: 100%; height: auto;" />
+        </div>
+        
+        <p class="section">&nbsp;</p>
+
+        <p class="section"><b>Results</b></p>
+        <!-- <div style="text-align: center">
+            <img src="./sm/assets/results.jpg" alt="" width="850" style="margin: auto" />
+        </div> -->
+
+        </br>
+        <div class="container" style="min-height: 224px">
+            <!-- <p style="text-align: center; font-size: 150%">Text-to-Video Editing with Protagonist</p> -->
+            <div id="resultCarousel1" class="carousel slide" data-ride="carousel" data-interval="5000">
+                <!-- <div class="carousel-inner"> -->
+                <div class="carousel-item active">
+                    <table width="1100px" align="center">
+                        <tbody>
+                            <tr>
+                                <th><div class="caption_title" style="width: 250;">IBR-Net</div></th>
+                                <th><div class="caption_title" style="width: 250;">ContraNeRF (Ours)</div></th>
+                                <th><div class="caption_title" style="width: 250;">IBR-Net</div></th>
+                                <th><div class="caption_title" style="width: 250;">ContraNeRF (Ours)</div></th>
+                            </tr>
+
+                            <tr>
+                                <th>
+                                    <video width="250" id="ibr-204-1" autoplay muted loop>
+                                        <source src="assets/ibrnet-out/204-1.mp4" type="video/mp4">
+                                        </video>
+                                </th>
+                                <th>
+                                    <video width="250" id="contra-204-1" autoplay muted loop>
+                                        <source src="assets/contranerf-out/204-1.mp4" type="video/mp4">
+                                        </video>
+                                    </th>
+                                <th>
+                                    <video width="250" id="ibr-204-2" autoplay muted loop>
+                                        <source src="assets/ibrnet-out/204-2.mp4" type="video/mp4">
+                                        </video>
+                                </th>
+                                <th>
+                                    <video width="250" id="contra-204-2" autoplay muted loop>
+                                        <source src="assets/contranerf-out/204-2.mp4" type="video/mp4">
+                                        </video>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+
+            </div>
+            <br>
+            <div id="resultCarousel2" class="carousel slide" data-ride="carousel" data-interval="5000">
+                <!-- <div class="carousel-inner"> -->
+
+                <div class="carousel-item active">
+                    <table width="1100px" align="center">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <video width="250" id="ibr-289-1" autoplay muted loop>
+                                        <source src="assets/ibrnet-out/289-1.mp4" type="video/mp4">
+                                        </video>
+                                </th>
+                                <th>
+                                    <video width="250" id="contra-289-1" autoplay muted loop>
+                                        <source src="assets/contranerf-out/289-1.mp4" type="video/mp4">
+                                        </video>
+                                    </th>
+                                <th>
+                                    <video width="250" id="ibr-289-2" autoplay muted loop>
+                                        <source src="assets/ibrnet-out/289-2.mp4" type="video/mp4">
+                                        </video>
+                                </th>
+                                <th>
+                                    <video width="250" id="contra-289-2" autoplay muted loop>
+                                        <source src="assets/contranerf-out/289-2.mp4" type="video/mp4">
+                                        </video>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <br>
+            <div id="resultCarousel3" class="carousel slide" data-ride="carousel" data-interval="5000">
+                <!-- <div class="carousel-inner"> -->
+
+                <div class="carousel-item active">
+                    <table width="1100px" align="center">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <video width="250" id="ibr-205-2" autoplay muted loop>
+                                        <source src="assets/ibrnet-out/205-2.mp4" type="video/mp4">
+                                        </video>
+                                </th>
+                                <th>
+                                    <video width="250" id="contra-205-2" autoplay muted loop>
+                                        <source src="assets/contranerf-out/205-2.mp4" type="video/mp4">
+                                        </video>
+                                    </th>
+                                <th>
+                                    <video width="250" id="ibr-587-1" autoplay muted loop>
+                                        <source src="assets/ibrnet-out/587-1.mp4" type="video/mp4">
+                                        </video>
+                                </th>
+                                <th>
+                                    <video width="250" id="contra-587-1" autoplay muted loop>
+                                        <source src="assets/contranerf-out/587-1.mp4" type="video/mp4">
+                                        </video>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                    
+
+            </div>
+
+        </div>
+
+
+        </br>
+
+
+        <p class="section">&nbsp;</p>
+
+
+        <p class="section" id="bibtex"><b>Bibtex</b></p>
+        <table border="0">
+            <tbody>
+                <pre style=" display: block;
+                    background: #eee;
+                    white-space: pre;
+                    -webkit-overflow-scrolling: touch;
+                    max-width: 100%;
+                    min-width: 100px;
+                    border-radius: 20px;
+                    ">
+
+    @inproceedings{yang2023contranerf,
+        title={ContraNeRF: Generalizable Neural Radiance Fields for Synthetic-to-real Novel View Synthesis via Contrastive Learning},
+        author={Yang, Hao and Hong, Lanqing and Li, Aoxue and Hu, Tianyang and Li, Zhenguo and Lee, Gim Hee and Wang, Liwei},
+        booktitle={Proceedings of IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+        year={2023}
+    }
+            </pre>
+            </tbody>
+        </table>
+        
+    </div>
+
+    <footer class="footer">
+        <p style="text-align: center;">
+            This page was adapted from <a href="https://make-a-protagonist.github.io/">Make-A-Protagonist</a>.
+        </p>
+    </footer>
+
+
+</body>
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WLX2Z5QLG8');
+ </script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script type="text/javascript">
+    $(document).ready(function () {
+
+        if (localStorage.getItem("my_app_name_here-quote-scroll") != null) {
+            $(window).scrollTop(localStorage.getItem("my_app_name_here-quote-scroll"));
+        }
+
+        $(window).on("scroll", function() {
+            localStorage.setItem("my_app_name_here-quote-scroll", $(window).scrollTop());
+        });
+
+      });
+ </script>
+
+ <script>
+    function prompt_on(prompt_element) {
+        prompt_element.classList.add("caption-active");
+    }
+
+    function prompt_off(prompt_element) {
+        prompt_element.classList.remove("caption-active");
+    }
+
+    function toggle_prompt(active_prompt_id, inactive_prompt_ids, result_id) {
+        let active_prompt = document.getElementById(active_prompt_id);
+        prompt_on(active_prompt);
+        for (let i = 0; i < inactive_prompt_ids.length; i++) {
+            let inactive_prompt = document.getElementById(inactive_prompt_ids[i]);
+            prompt_off(inactive_prompt);
+        }
+
+        let result = document.getElementById(result_id);
+        result.src = file_paths[active_prompt_id];
+    }
+
+    function toggle_prompts(active_prompt_id1, active_prompt_id2, inactive_prompt_ids1, inactive_prompt_ids2, result_id1, result_id2 ) {
+    toggle_prompt(active_prompt_id1, inactive_prompt_ids1, result_id1);
+    toggle_prompt(active_prompt_id2, inactive_prompt_ids2, result_id2);
+    }
+
+
+ </script>
+
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>
