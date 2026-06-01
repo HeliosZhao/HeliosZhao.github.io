@@ -89,20 +89,41 @@ strong {
   font-size: 14px;
 }
 
-heading {
+.heading {
+  display: inline-block;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 22px;
 }
 
-papertitle {
+.papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 700
 }
 
-name {
+.name {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 32px;
+}
+
+.notice {
+  color: #a82e2e;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 6px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .one {
@@ -128,4 +149,63 @@ name {
 
 span.highlight {
   background-color: #ffffd0;
+}
+
+@media (max-width: 700px) {
+  body {
+    margin: 0;
+    padding: 0 14px;
+  }
+
+  body > table {
+    max-width: 100% !important;
+  }
+
+  table {
+    width: 100% !important;
+  }
+
+  table table tr {
+    display: block;
+  }
+
+  table table td {
+    box-sizing: border-box;
+    display: block;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  td[style*="width:25%"],
+  td[style*="width:35%"],
+  td[style*="width:40%"] {
+    padding: 10px 0 !important;
+    text-align: center;
+  }
+
+  td[style*="width:75%"],
+  td[style*="width:70%"] {
+    padding: 5px 0 !important;
+  }
+
+  td img[width="200"],
+  td img[width="250"] {
+    width: min(100%, 320px) !important;
+  }
+
+  img.hoverZoomLink {
+    width: min(70vw, 220px) !important;
+  }
+
+  .more-link {
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  .more-link img {
+    float: none;
+    max-width: 120px;
+    width: auto !important;
+  }
 }
