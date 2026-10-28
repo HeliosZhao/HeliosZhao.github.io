@@ -14,6 +14,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="icon" type="image/png" href="img/letter-z.png">
   <script type="text/javascript" src="js/hidebib.js"></script>
+  <script src="js/previews.js" defer></script>
 </head>
 
 <body>
@@ -29,7 +30,7 @@
               </p>
               <p>I am a Research Scientist at <strong>NVIDIA Research</strong>, working with Prof. <a href="https://songhan.mit.edu/">Song Han</a>. I obtained my Ph.D. degree from <strong>National University of Singapore</strong>, where I was advised by A/P <a href="https://www.comp.nus.edu.sg/~leegh/">Gim Hee Lee</a>. I obtained my B.E. degree from <strong>Tianjin University</strong>.</p>
               <p>
-                We are working on efficient and high-quality AIGC models, including image, video and 3D generation.
+                We are working on efficient, high-quality generative models for images, videos and 3D scenes, as well as real-time neural rendering.
               </p>
 
               <p class="social-links" style="text-align:center">
@@ -42,13 +43,12 @@
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="img/selfie.JPG"><img style="width:100%;max-width:100%;border-radius:50%" alt="profile photo" src="img/selfie.JPG" class="hoverZoomLink"></a>
+              <a href="img/selfie.JPG"><img style="width:100%;max-width:100%;border-radius:50%" alt="Yuyang Zhao" src="img/optimized/selfie.webp" class="hoverZoomLink" width="640" height="680" fetchpriority="high" decoding="async"></a>
             </td>
           </tr>
         </tbody></table>
 
         <hr>
-
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
@@ -61,10 +61,16 @@
         <tr>
           <td style="padding:10px;width:100%;vertical-align:middle">
             <p class="notice"><strong><em>I am always looking to collaborate with motivated students and researchers passionate about efficient, high-quality generative modeling. Our current research explores the frontiers of video pre-training, post-training, video editing, and world models. If you are interested in pushing the boundaries of what is possible in video generation, please reach out!</em></strong></p>
-            <ul>
+            <ul class="recent-news">
+                <li><strong>[<font color="red">September 2026</font>]</strong> Check out <a href="https://research.nvidia.com/labs/adlr/DLSS5/">DLSS 5: Generative Neural Rendering</a>, bringing generative AI to real-time graphics!</li>
+                <li><strong>[<font color="red">July 2026</font>]</strong> Our <a href="https://nvlabs.github.io/Sana/Video2/">SANA-Video 2.0</a> paper is out! Efficient 720p video generation with hybrid attention and Attention Residuals.</li>
                 <li><strong>[<font color="red">May 2026</font>]</strong> SANA-WM and SANA-Streaming are released!</li>
                 <li><strong>[<font color="red">March 2026</font>]</strong> I will be an Area Chair for NeurIPS 2026!</li>
                 <li><strong>[<font color="red">October 2025</font>]</strong> SANA-Video (<font color="red">Oral</font>) and LongLive are accepted to ICLR 2026! Check out our long and efficient video generation models!</li>
+            </ul>
+            <details class="news-archive">
+              <summary>Earlier news</summary>
+              <ul>
                 <li><strong>[<font color="red">September 2025</font>]</strong> GLIMPSE is accepted to EMNLP 2025 as Oral!</li>
                 <li><strong>[<font color="red">August 2025</font>]</strong> I will be an Area Chair for ICLR 2026!</li>
                 <li><strong>[<font color="red">June 2025</font>]</strong> SANA-Sprint is accepted to ICCV 2025 as Highlight! See you in Hawaii!</li>
@@ -86,7 +92,8 @@
                 <li><strong>[November 2021]</strong> One paper about optical flow estimation is accepted to Neurocomputing.</li>
                 <li><strong>[September 2021]</strong> One paper about optical flow estimation is accepted to Signal Processing: Image Communication.</li>
                 <li><strong>[<font color="red">March 2021</font>]</strong> One paper about domain generalized person re-identification is accepted to CVPR 2021!</li>
-            </ul>
+              </ul>
+            </details>
           </td>
         </tr>
         </tbody></table>
@@ -109,7 +116,7 @@
               <tr>
 
                 <td style="padding:20px;width:35%;vertical-align:middle">
-                  <img src="img/NVIDIA-logo-white.png" alt="NVIDIA Logo" width="250">
+                  <img src="img/optimized/NVIDIA-logo-white.webp" class="preview-image" width="960" height="540" alt="NVIDIA Logo" loading="lazy" decoding="async">
                 </td>
                 <td style="padding:5px;width:75%;vertical-align:middle">
                   <p style="margin-bottom:5px;">
@@ -119,15 +126,16 @@
                     <em>NVIDIA Research</em> | May 2025 - Present
                   </p>
                   <ul style="padding-left:20px;">
+                    <li>Real-time Neural Rendering (<a href="https://research.nvidia.com/labs/adlr/DLSS5/">DLSS 5</a>)</li>
                     <li>Image Generation (SANA 1.5 and SANA Sprint)</li>
-                    <li>Video Generation (SANA-Video and LongLive)</li>
+                    <li>Video Generation (SANA-Video, SANA-Video 2.0 and LongLive)</li>
                   </ul>
                 </td>
               </tr>
 
               <tr>
                 <td style="padding:40px;width:35%;vertical-align:middle">
-                    <img src="img/microsoft-logo.png" alt="Microsoft Logo" width="200">
+                    <img src="img/optimized/microsoft-logo.webp" class="preview-image preview-image-small" width="216" height="46" alt="Microsoft Logo" loading="lazy" decoding="async">
                   </td>
                   <td style="padding:5px;width:75%;vertical-align:middle">
                   <p style="margin-bottom:5px;">
@@ -149,6 +157,38 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
           <td style="padding:10px;width:100%;vertical-align:middle">
+            <span class="heading">Neural Rendering</span>
+          </td>
+        </tr>
+      </tbody></table>
+
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr>
+            <td style="padding:20px;width:35%;vertical-align:middle">
+                <a href="https://research.nvidia.com/labs/adlr/DLSS5/">
+                    <img src="img/optimized/dlss5.webp" class="preview-image" width="960" height="504" alt="NVIDIA DLSS 5 brings 3D-guided neural rendering to NBA 2K27" loading="lazy" decoding="async">
+                </a>
+            </td>
+            <td style="padding:5px;width:75%;vertical-align:middle">
+                <a href="https://research.nvidia.com/labs/adlr/DLSS5/">
+                    <span class="papertitle" id="dlss5-title">DLSS 5: Generative Neural Rendering</span>
+                </a>
+                <br>
+                <em>NVIDIA, 2026</em>
+                <br>
+                <div class="paper" id="dlss5">
+                  <a href="https://research.nvidia.com/labs/adlr/DLSS5/">Project Page</a> /
+                  <a href="https://www.nvidia.com/en-us/geforce/news/dlss-5-3d-guided-neural-rendering/">Official Overview</a> /
+                  <a href="https://www.youtube.com/watch?v=58FagrSqC4M">Video</a>
+                </div>
+                <p>DLSS 5 brings generative AI into real-time graphics to enhance lighting and materials. A one-step diffusion model combines renderer guidance with temporal state, enabling up to 4K rendering while preserving scene structure and artistic control.</p>
+            </td>
+        </tr>
+      </tbody></table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+          <td style="padding:10px;width:100%;vertical-align:middle">
             <span class="heading">SANA Series</span>
           </td>
         </tr>
@@ -159,7 +199,50 @@
         <tr>
 
             <td style="padding:20px;width:35%;vertical-align:middle">
-                <img src='img/sana-wm.jpg' width="250" alt="SANA-WM teaser">
+                <!-- Preview source: https://junsongc.top/JunsongChen/sana-video-2.mp4 -->
+                <video class="preview-image" data-preview width="640" height="360" controls loop muted playsinline preload="none" poster="img/optimized/sana-video2.webp" aria-label="SANA-Video 2.0 video generation montage">
+                  <source src="img/optimized/sana-video2.mp4" type="video/mp4">
+                  <a href="img/optimized/sana-video2.mp4">View SANA-Video 2.0 video generation montage</a>
+                </video>
+            </td>
+            <td style="padding:5px;width:75%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2607.21553">
+                    <span class="papertitle">SANA-Video 2.0: Hybrid Linear Attention with Attention Residuals for Efficient Video Generation</span>
+                </a>
+                <br>
+                <a href="https://lawrence-cj.github.io/">Junsong Chen</a>,
+                <a href="https://lovesykun.cn/about.html">Jincheng Yu</a>,
+                Yitong Li,
+                Shuchen Xue,
+                <a href="https://haozheliu-st.github.io/">Haozhe Liu</a>,
+                Jingyu Xin,
+                <strong>Yuyang Zhao</strong>,
+                <a href="https://owen718.github.io/">Tian Ye</a>,
+                Zhangjie Wu,
+                Zian Wang,
+                <a href="https://zhoudaquan.github.io/homepage.io/index.html">Daquan Zhou</a>,
+                <a href="http://luoping.me/">Ping Luo</a>,
+                <a href="https://hanlab.mit.edu/songhan">Song Han</a>,
+                <a href="https://xieenze.github.io/">Enze Xie</a>
+                <br>
+                <em>arXiv, 2026</em>
+                <br>
+                <div class="paper" id="sana-video2">
+                  <a href="https://nvlabs.github.io/Sana/Video2/">Project Page</a> /
+                  <a href="https://arxiv.org/pdf/2607.21553">PDF</a> /
+                  <a href="https://github.com/NVlabs/Sana">Code</a> /
+                  <a href="https://huggingface.co/Efficient-Large-Model/SANA-Video_2.0_5B_720p">Model</a> /
+                  <a href="https://huggingface.co/spaces/Efficient-Large-Model/sana-video2-5b-720p-demo">Live Demo</a>
+                </div>
+                <p></p>
+                <p>Hybrid linear/softmax attention and Attention Residuals enable efficient video generation at 5B and 14B scales. With Sol-Engine, the 5B model generates a 5-second 720p video in 13.06 seconds on one H100 with 40 sampling steps.</p>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td style="padding:20px;width:35%;vertical-align:middle">
+                <img src="img/optimized/sana-wm.webp" class="preview-image" width="960" height="528" alt="SANA-WM teaser" loading="lazy" decoding="async">
             </td>
             <td style="padding:5px;width:75%;vertical-align:middle">
                 <a href="https://arxiv.org/abs/2605.15178">
@@ -184,7 +267,7 @@
                   <a href="https://arxiv.org/pdf/2605.15178">PDF</a> /
                   <a href="https://github.com/NVlabs/Sana">Code</a> /
                   <a href="https://huggingface.co/Efficient-Large-Model/SANA-WM_bidirectional">Models</a>
-                  <a class="more-link" href="https://github.com/NVlabs/Sana" target="_blank"><img alt="GitHub stars" align="right"
+                  <a class="more-link" href="https://github.com/NVlabs/Sana" target="_blank"><img alt="GitHub stars" loading="lazy" decoding="async" align="right"
                     src="https://img.shields.io/github/stars/NVlabs/Sana?style=social"></a>
                 </div>
 
@@ -199,7 +282,7 @@
         <tr>
 
             <td style="padding:20px;width:35%;vertical-align:middle">
-                <img src='img/sana-streaming.jpg' width="250" alt="SANA-Streaming teaser">
+                <img src="img/optimized/sana-streaming.webp" class="preview-image" width="900" height="495" alt="SANA-Streaming teaser" loading="lazy" decoding="async">
             </td>
             <td style="padding:5px;width:75%;vertical-align:middle">
                 <a href="https://arxiv.org/abs/2605.30409">
@@ -223,7 +306,7 @@
                   <a href="https://nvlabs.github.io/Sana/Streaming/">Project Page</a> /
                   <a href="https://arxiv.org/pdf/2605.30409">PDF</a> /
                   <a href="https://github.com/NVlabs/Sana">Code</a>
-                  <a class="more-link" href="https://github.com/NVlabs/Sana" target="_blank"><img alt="GitHub stars" align="right"
+                  <a class="more-link" href="https://github.com/NVlabs/Sana" target="_blank"><img alt="GitHub stars" loading="lazy" decoding="async" align="right"
                     src="https://img.shields.io/github/stars/NVlabs/Sana?style=social"></a>
                 </div>
 
@@ -238,7 +321,7 @@
         <tr>
 
             <td style="padding:20px;width:35%;vertical-align:middle">
-                <img src='img/sana-video.png' width="250">
+                <img src="img/optimized/sana-video.webp" class="preview-image" width="960" height="399" alt="SANA-Video overview" loading="lazy" decoding="async">
             </td>
             <td style="padding:5px;width:75%;vertical-align:middle">
                 <!-- <p> -->
@@ -277,7 +360,7 @@
                   <a href="https://nvlabs.github.io/Sana/Video/">Project Page</a> /
                   <a href="https://arxiv.org/pdf/2509.24695">PDF</a> /
                   <a href="https://github.com/NVlabs/Sana">Code</a>
-                  <a class="more-link" href="https://github.com/NVlabs/Sana" target="_blank"><img alt="GitHub stars" align="right"
+                  <a class="more-link" href="https://github.com/NVlabs/Sana" target="_blank"><img alt="GitHub stars" loading="lazy" decoding="async" align="right"
                     src="https://img.shields.io/github/stars/NVlabs/Sana?style=social"></a>
                 </div>
 
@@ -293,7 +376,10 @@
         <tr>
 
             <td style="padding:20px;width:35%;vertical-align:middle">
-                <img src='img/sana-sprint.gif' width="250">
+                <video class="preview-image" data-preview width="640" height="352" controls loop muted playsinline preload="none" poster="img/optimized/sana-sprint.webp" aria-label="SANA-Sprint image generation examples">
+                  <source src="img/optimized/sana-sprint.mp4" type="video/mp4">
+                  <a href="img/sana-sprint.gif">View SANA-Sprint image generation examples</a>
+                </video>
             </td>
             <td style="padding:5px;width:75%;vertical-align:middle">
                 <!-- <p> -->
@@ -321,7 +407,7 @@
                   <a href="https://nvlabs.github.io/Sana/Sprint/">Project Page</a> /
                   <a href="https://arxiv.org/pdf/2503.09641.pdf">PDF</a> /
                   <a href="https://github.com/NVlabs/Sana">Code</a>
-                  <a class="more-link" href="https://github.com/NVlabs/Sana" target="_blank"><img alt="GitHub stars" align="right"
+                  <a class="more-link" href="https://github.com/NVlabs/Sana" target="_blank"><img alt="GitHub stars" loading="lazy" decoding="async" align="right"
                     src="https://img.shields.io/github/stars/NVlabs/Sana?style=social"></a>
                 </div>
 
@@ -337,7 +423,7 @@
         <tr>
 
             <td style="padding:20px;width:35%;vertical-align:middle">
-                <img src='img/sana.png' width="200">
+                <img src="img/optimized/sana.webp" class="preview-image preview-image-small" width="254" height="212" alt="SANA 1.5 overview" loading="lazy" decoding="async">
             </td>
             <td style="padding:5px;width:75%;vertical-align:middle">
                 <!-- <p> -->
@@ -368,7 +454,7 @@
                   <a href="https://nvlabs.github.io/Sana/">Project Page</a> /
                   <a href="https://arxiv.org/pdf/2501.18427.pdf">PDF</a> /
                   <a href="https://github.com/NVlabs/Sana">Code</a>
-                  <a class="more-link" href="https://github.com/NVlabs/Sana" target="_blank"><img alt="GitHub stars" align="right"
+                  <a class="more-link" href="https://github.com/NVlabs/Sana" target="_blank"><img alt="GitHub stars" loading="lazy" decoding="async" align="right"
                     src="https://img.shields.io/github/stars/NVlabs/Sana?style=social"></a>
                 </div>
 
@@ -396,7 +482,7 @@
         <tr>
 
             <td style="padding:20px;width:35%;vertical-align:middle">
-                <img src='img/longlive2.jpg' width="250" alt="LongLive-2.0 teaser">
+                <img src="img/optimized/longlive2.webp" class="preview-image" width="960" height="540" alt="LongLive-2.0 teaser" loading="lazy" decoding="async">
             </td>
             <td style="padding:5px;width:75%;vertical-align:middle">
                 <a href="https://arxiv.org/abs/2605.18739">
@@ -428,7 +514,7 @@
                   <a href="https://nvlabs.github.io/LongLive/LongLive2/">Project Page</a> /
                   <a href="https://arxiv.org/pdf/2605.18739">PDF</a> /
                   <a href="https://github.com/NVlabs/LongLive">Code</a>
-                  <a class="more-link" href="https://github.com/NVlabs/LongLive" target="_blank"><img alt="GitHub stars" align="right"
+                  <a class="more-link" href="https://github.com/NVlabs/LongLive" target="_blank"><img alt="GitHub stars" loading="lazy" decoding="async" align="right"
                     src="https://img.shields.io/github/stars/NVlabs/LongLive?style=social"></a>
                 </div>
 
@@ -443,7 +529,7 @@
         <tr>
 
             <td style="padding:20px;width:35%;vertical-align:middle">
-                <img src='img/longlive.png' width="250">
+                <img src="img/optimized/longlive.webp" class="preview-image" width="960" height="600" alt="LongLive video generation overview" loading="lazy" decoding="async">
             </td>
             <td style="padding:5px;width:75%;vertical-align:middle">
                 <!-- <p> -->
@@ -472,7 +558,7 @@
                   <a href="https://arxiv.org/pdf/2509.22622">PDF</a> /
                   <a href="https://github.com/NVlabs/LongLive">Code</a> /
                   <a href="https://youtu.be/CO1QC7BNvig">Video Demo</a>
-                  <a class="more-link" href="https://github.com/NVlabs/LongLive" target="_blank"><img alt="GitHub stars" align="right"
+                  <a class="more-link" href="https://github.com/NVlabs/LongLive" target="_blank"><img alt="GitHub stars" loading="lazy" decoding="async" align="right"
                     src="https://img.shields.io/github/stars/NVlabs/LongLive?style=social"></a>
                 </div>
 
@@ -492,7 +578,10 @@
                 </video>
             </td> -->
             <td style="padding:20px;width:35%;vertical-align:middle">
-                <img src='img/genxd.gif' width="250">
+                <video class="preview-image" data-preview width="640" height="360" controls loop muted playsinline preload="none" poster="img/optimized/genxd.webp" aria-label="GenXD 3D and 4D generation examples">
+                  <source src="img/optimized/genxd.mp4" type="video/mp4">
+                  <a href="img/genxd.gif">View GenXD 3D and 4D generation examples</a>
+                </video>
             </td>
             <td style="padding:5px;width:75%;vertical-align:middle">
                 <!-- <p> -->
@@ -518,7 +607,7 @@
                   <a href="https://arxiv.org/pdf/2411.02319">PDF</a> /
                   <a href="https://github.com/HeliosZhao/GenXD">Code</a> /
                   <a href="https://huggingface.co/datasets/Yuyang-z/CamVid-30K">Data</a>
-                  <a class="more-link" href="https://github.com/HeliosZhao/GenXD" target="_blank"><img alt="GitHub stars" align="right"
+                  <a class="more-link" href="https://github.com/HeliosZhao/GenXD" target="_blank"><img alt="GitHub stars" loading="lazy" decoding="async" align="right"
                     src="https://img.shields.io/github/stars/HeliosZhao/GenXD?style=social"></a>
                 </div>
 
@@ -534,7 +623,10 @@
         <tr>
             <!-- <tr bgcolor="#ffffd0"> -->
                 <td style="padding:20px;width:35%;vertical-align:middle">
-                    <img src='img/animate124.gif' width="250">
+                    <video class="preview-image" data-preview width="300" height="200" controls loop muted playsinline preload="none" poster="img/optimized/animate124.webp" aria-label="Animate124 animated 3D scene examples">
+                      <source src="img/optimized/animate124.mp4" type="video/mp4">
+                      <a href="img/animate124.gif">View Animate124 animated 3D scene examples</a>
+                    </video>
                 </td>
                 <td style="padding:5px;width:75%;vertical-align:middle">
                     <!-- <p> -->
@@ -557,7 +649,7 @@
                       <a href="https://arxiv.org/pdf/2311.14603.pdf">PDF</a> /
                       <a href="https://github.com/HeliosZhao/Animate124">Code</a> /
                       <a href="https://www.youtube.com/watch?v=L_1HCBhz9MM">Video</a>
-                      <a class="more-link" href="https://github.com/HeliosZhao/Animate124" target="_blank"><img alt="GitHub stars" align="right"
+                      <a class="more-link" href="https://github.com/HeliosZhao/Animate124" target="_blank"><img alt="GitHub stars" loading="lazy" decoding="async" align="right"
                         src="https://img.shields.io/github/stars/HeliosZhao/Animate124?style=social"></a>
                     </div>
 
@@ -573,7 +665,10 @@
         <tr>
           <!-- <tr bgcolor="#ffffd0"> -->
               <td style="padding:20px;width:35%;vertical-align:middle">
-                  <img src='img/make-a-protagonist.gif' width="250">
+                  <video class="preview-image" data-preview width="640" height="360" controls loop muted playsinline preload="none" poster="img/optimized/make-a-protagonist.webp" aria-label="Make-A-Protagonist video editing examples">
+                    <source src="img/optimized/make-a-protagonist.mp4" type="video/mp4">
+                    <a href="img/make-a-protagonist.gif">View Make-A-Protagonist video editing examples</a>
+                  </video>
                       </td>
               <td style="padding:5px;width:75%;vertical-align:middle">
                   <!-- <p> -->
@@ -595,7 +690,7 @@
                     <a href="https://arxiv.org/pdf/2305.08850.pdf">PDF</a> /
                     <a href="https://github.com/HeliosZhao/Make-A-Protagonist">Code</a> /
                     <a href="https://huggingface.co/spaces/Make-A-Protagonist/Make-A-Protagonist-inference">Demo</a>
-                    <a class="more-link" href="https://github.com/HeliosZhao/Make-A-Protagonist" target="_blank"><img alt="GitHub stars" align="right"
+                    <a class="more-link" href="https://github.com/HeliosZhao/Make-A-Protagonist" target="_blank"><img alt="GitHub stars" loading="lazy" decoding="async" align="right"
                       src="https://img.shields.io/github/stars/HeliosZhao/Make-A-Protagonist?style=social"></a>
                   </div>
 
@@ -623,7 +718,7 @@
         <tr>
             <!-- <tr bgcolor="#ffffd0"> -->
                 <td style="padding:20px;width:35%;vertical-align:middle">
-                    <img src='img/sole.png' width="250">
+                    <img src="img/optimized/sole.webp" class="preview-image" width="960" height="416" alt="SOLE language-guided 3D segmentation overview" loading="lazy" decoding="async">
                         </td>
                 <td style="padding:5px;width:75%;vertical-align:middle">
                     <!-- <p> -->
@@ -657,7 +752,7 @@
           <tr>
             <!-- <tr bgcolor="#ffffd0"> -->
                 <td style="padding:20px;width:35%;vertical-align:middle">
-                    <img src='img/shade-visualdg.png' width="250">
+                    <img src="img/optimized/shade-visualdg.webp" class="preview-image" width="960" height="293" alt="SHADE visual domain generalization overview" loading="lazy" decoding="async">
                         </td>
                 <td style="padding:5px;width:75%;vertical-align:middle">
                     <!-- <p> -->
@@ -691,7 +786,7 @@
 
         <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src='img/advstyle.png' width="250">
+                <img src="img/optimized/advstyle.webp" class="preview-image" width="960" height="378" alt="Adversarial style augmentation overview" loading="lazy" decoding="async">
                     </td>
             <!-- <td width="75%" valign="middle"> -->
             <td style="padding:5px;width:75%;vertical-align:middle">
@@ -725,7 +820,7 @@
         <tr>
         <!-- <tr bgcolor="#ffffd0"> -->
             <td style="padding:20px;width:35%;vertical-align:middle">
-                <img src='img/shade_intro.png' width="250">
+                <img src="img/optimized/shade_intro.webp" class="preview-image" width="960" height="497" alt="SHADE semantic segmentation overview" loading="lazy" decoding="async">
                     </td>
             <td style="padding:5px;width:75%;vertical-align:middle">
                 <!-- <p> -->
@@ -761,7 +856,7 @@
         <tr>
         <!-- <tr bgcolor="#ffffd0"> -->
             <td style="padding:20px;width:35%;vertical-align:middle">
-                <img src='img/ncdss.png' width="250">
+                <img src="img/optimized/ncdss.webp" class="preview-image" width="960" height="482" alt="Novel class discovery in semantic segmentation overview" loading="lazy" decoding="async">
                     </td>
             <td style="padding:5px;width:75%;vertical-align:middle">
                 <!-- <p> -->
@@ -794,7 +889,7 @@
         <tr>
             <!-- <tr bgcolor="#ffffd0"> -->
                 <td style="padding:20px;width:35%;vertical-align:middle">
-                    <img src='img/m3l.png' width="250">
+                    <img src="img/optimized/m3l.webp" class="preview-image" width="960" height="321" alt="Memory-based multi-source meta-learning overview" loading="lazy" decoding="async">
                         </td>
                 <td style="padding:5px;width:75%;vertical-align:middle">
                     <!-- <p> -->
@@ -839,7 +934,7 @@
           <td style="padding:10px;width:100%;vertical-align:middle">
             <ul>
                 <!-- <li><strong>Program Committee / Conference Reviewer:</strong> CVPR 2022-2023, ICCV 2023, ECCV 2022, ICML 2022, NeurIPS 2022-2023, AAAI 2022, ACM MM 2022</li> -->
-                <li><strong>Area Chair:</strong> ICLR 2026, NeurIPS 2026</li>
+                <li><strong>Area Chair:</strong> ICLR, NeurIPS</li>
                 <li><strong>Program Committee / Conference Reviewer:</strong> CVPR, ICCV, ECCV, ICML, NeurIPS, ICLR</li>
                 <li><strong>Journal Reviewer:</strong> IJCV, IEEE TPAMI, IEEE TMM, IEEE TCSVT</li>
             </ul>
